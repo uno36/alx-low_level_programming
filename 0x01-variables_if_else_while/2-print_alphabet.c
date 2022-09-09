@@ -9,15 +9,19 @@
  */
 int main(void)
 {
-	int n;
+  
+       char low, e, q;
 
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-	/* your code goes there */
-	char c;
+	e = 'e';
+	q = 'q';
 
-	for (c = 'a' ; c <= 'z' ; c++)
-	putchar(c);
+	for (low = 'a'; low <= 'z'; low++)
+	{
+		if (low != e && low != q)
+			putchar(low);
+	}
 	putchar('\n');
+
 	return (0);
+	
 }
