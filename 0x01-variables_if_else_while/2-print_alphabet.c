@@ -9,19 +9,10 @@
  */
 int main(void)
 {
-  
-       char low, e, q;
+	char c;
 
-	e = 'e';
-	q = 'q';
-
-	for (low = 'a'; low <= 'z'; low++)
-	{
-		if (low != e && low != q)
-			putchar(low);
-	}
+	for (c = 'a' ; c <= 'z' ; c++)
+	putchar(c);
 	putchar('\n');
-
 	return (0);
-	
 }
