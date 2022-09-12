@@ -10,18 +10,13 @@
  */
 int main(void)
 {
-	char c;
-	char b;
+char alph;
+char ALPH;
 
-	for (c = 'a'; c <= 'z'; c++)
-	{
-		putchar(c);
-	}
-
-	for (b = 'A'; b <= 'Z'; b++)
-	{
-		putchar(b);
-	}
-	putchar('\n');
-	return (0);
+for (alph = 'a'; alph <= 'z'; alph++)
+putchar(alph);
+for (ALPH = 'A'; ALPH <= 'Z'; ALPH++)
+putchar(ALPH);
+putchar('\n');
+return (0);
 }
