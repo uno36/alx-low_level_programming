@@ -1,37 +1,14 @@
 #include "main.h"
-/**
- * times_table - functions to print times table
- *  local variable
- * Return : zero period
- */
-void times_table(void)
-{
-	int i, j, k;
 
-	for (i = 0; i < 10; i++)
-	{
-	for (j = 0; j < 10; j++)
-	{
-	k = j * i;
-	if (j == 0)
-	{
-	_putchar(k + '0');
-	}
-	if (k < 10 && j != 0)
-	{
-	_putchar(',');
-	_putchar(' ');
-	_putchar(' ');
-	_putchar(k + '0');
-	}
-	else if (k >= 10)
-	{
-	_putchar(',');
-	_putchar(' ');
-	_putchar((k / 10) + '0');
-	_putchar((k % 10) + '0');
-	}
-	}
-	_putchar('\n');
-	}
+/**
+ * add - the entry to the function
+ *
+ * @a: one of the numbers
+ * @b: the other number
+ * Return: the value of the addition
+ */
+
+int add(int a, int b)
+{
+return (a + b);
 }
