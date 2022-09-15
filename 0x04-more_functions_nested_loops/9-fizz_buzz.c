@@ -1,17 +1,16 @@
 #include "main.h"
-#include <stdio.h>
+
 
 /**
- * main - Entry piont
+ * main - check the code
  * Return: Always 0
  */
 
 int main(void)
 {
-int i, n;
-print("Enter the number :");
-scanf("%d", &n);
-for (i = 1; i <= n; i++)
+int i;
+
+for (i = 1; i <= 100; i++)
 {
 if (i % 15 == 0)
 printf("FizzBuzz\t");
