@@ -1,54 +1,42 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include <time.h>
-#include <unistd.h>
 
+/**
+ * main - random password generator for 101-crackme
+ *
+ * Return: always 0
+ */
 int main(void)
 {
-    int length;
+	int i, j, k, s;
+	char c[] = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char p[58];
 
-    printf("Enter expected length of password: ");
-    scanf("%d", &length);
-
-    if(length < 0)
-    {
-        printf("Password length must be >= 1!");
-        return 1;
-    }
-
-    char *password = malloc(length + 1);
-    char *digits = "0123456789";
-    int digits_length =strlen (digits);
-
-    char *lowers = "abcdefghijklmnopqrstuvwxyz";
-    int lowers_length = strlen(lowers);
-
-    char *uppers = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    int uppers_length = strlen(uppers);
-
-    char *symbols = "!@#$%^&*()";
-    int symbols_length = strlen(symbols);
-
-    srand(time(NULL) * getpid());
-    for(int i = 0; i< length; i++)
-    {
-        int char_type = rand() % 4;
-
-        if(char_type == 0)
-            password[i] = digits[rand() % digits_length];
-        else if (char_type == 1 )
-            password[i] = lowers[rand() % lowers_length];
-        else if (char_type == 2)
-            password[i] = uppers[rand() % uppers_length];
-        else
-            password[i] = symbols[rand() % symbols_length];
-
-    }
-
-    password[length] = '\0';
-    printf("password: %s\n", password);
-    free(password);
-
-    return(0);
+	srand(time(NULL));
+	while (s != 2772)
+	{
+		i = k = s = 0;
+		while ((2772 - 122) > s)
+		{
+			j = rand() % 62;
+			p[i] = c[j];
+			s += c[j];
+			i++;
+		}
+		while (c[k])
+		{
+			if (c[k] == (2772 - s))
+			{
+				p[i] = c[k];
+				s += c[k];
+				i++;
+				break;
+			}
+			k++;
+		}
+	}
+	p[i] = '\0';
+	printf("%s", p);
+	return (0);
 }
