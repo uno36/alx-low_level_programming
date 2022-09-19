@@ -1,16 +1,19 @@
+#include <main.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
 #include <unistd.h>
 
-int main(void ){
-
+int main(void)
+{
     int length;
+
     printf("Enter expected length of password: ");
     scanf("%d", &length);
 
-    if(length < 0){
+    if(length < 0)
+    {
         printf("Password length must be >= 1!");
         return 1;
     }
@@ -29,7 +32,8 @@ int main(void ){
     int symbols_length = strlen(symbols);
 
     srand(time(NULL) * getpid());
-    for(int i = 0; i< length; i++){
+    for(int i = 0; i< length; i++)
+    {
         int char_type = rand() % 4;
 
         if(char_type == 0)
