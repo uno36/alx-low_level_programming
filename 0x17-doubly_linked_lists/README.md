@@ -20,7 +20,3 @@
 5-get_dnodeint.c: Find the node at position index of a dlistint_t list
 
 6-sum_dlistint.c: Calculate the sum of the data of a dlistint_t list
-
-7-insert_dnodeint.c: Insert a node at position index of a dlistint_t list
-
-8-delete_dnodeint.c: Delete the node at position index of a dlistint_t list
